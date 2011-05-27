@@ -17,7 +17,7 @@ h1 {
 	text-indent: -9999px;
 	width: 600px;
 	height: 240px;
-	background: transparent url('/images/portrait-header.jpg') no-repeat;
+	background: transparent url('./images/portrait-header.jpg') no-repeat;
 	margin-top: 0;
 	padding-bottom: 1px;
 	margin-bottom: 1.618em;
@@ -42,7 +42,7 @@ a.twitter {
 	width: 16px;
 	height: 16px;
 	display: inline-block;
-	background: transparent url('/images/twitter.png') no-repeat;
+	background: transparent url('./images/twitter.png') no-repeat;
 	text-indent: -9999px;
 }
 a.github {
@@ -50,7 +50,7 @@ a.github {
 	width: 16px;
 	height: 16px;
 	display: inline-block;
-	background: transparent url('/images/github.png') no-repeat;
+	background: transparent url('./images/github.png') no-repeat;
 	text-indent: -9999px;
 }
 p {
