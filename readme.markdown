@@ -3,7 +3,13 @@
 Eisenhower is a work-in-progress read-only rubygem to help you work the
 [Interstate API](http://developers.interstateapp.com).
 
-- - -
+Install
+-------
+
+    gem install 'eisenhower'
+
+Usage
+----
 
 First thing to do is set an OAuth token – how you get this, at the moment, is up to you.
 
@@ -64,23 +70,21 @@ Double check the code, but most attributes are from Interstate's documentation:
 3.  [Road Updates](http://developers.interstateapp.com/update/get)
 4.  [Staff](http://developers.interstateapp.com/staff/get)
 
-- - -
+
+To Do
+-----
 
 There’s much left to do, so please feel free
 to fork it & help out.
 
-#### Refactor
+- **Refactor** - There are too many API calls, which makes getting simple information slow. API calls inside API calls gets ugly, and there’s a lot of information that could be instantiated without an extra call.
 
-There are too many API calls, which makes getting simple information slow. API calls inside API calls gets ugly, and there’s a lot of information that could be instantiated without an extra call.
+- **Tests** - I'm a designer, and am subsequently despicable at writing tests. Please help.
 
-#### Tests
-I'm a designer, and am subsequently despicable at writing tests. Please help.
+- **Implement newer API objects** - There are now at least two more objects (File & Activity) that I haven’t touched yet.
 
-#### Implement newer API objects
+- **Writing as well as Reading** - The only reason Eisenhower is read-only is because that’s all I’ve found time to do so far. Help here would be swell.
 
-There are now at least two more objects (File & Activity) that I haven’t touched yet.
+- - -
 
-#### Writing as well as Reading
-
-The only reason Eisenhower is read-only is because that’s all I’ve found time to do so far. Help here would be swell.
-
+Perhaps together, we can get it up to version one.
