@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["micah rich"]
   s.email       = ["micah@micahrich.com"]
-  s.homepage    = "http://micahrich.com"
+  s.homepage    = "http://micahrich.com/eisenhower"
   s.summary     = %q{A ruby wrapper for the Interstate API.}
-  s.description = %q{A ruby wrapper for the Interstate API.}
+  s.description = %q{A ruby wrapper for the Interstate API. It's still unfinished, a bit slow, and read-only.}
 
   s.rubyforge_project = "eisenhower"
   s.required_rubygems_version = ">= 1.3.6"
