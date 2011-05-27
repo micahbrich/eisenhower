@@ -19,7 +19,7 @@ module Eisenhower
     end
     
     def roads
-      response = Eisenhower::Client.get("/roadmap/roads/id/#{self.id}")
+      response = Eisenhower::Client.fetch("/roadmap/roads/id/#{self.id}")
       body = Crack::JSON.parse(response.body)["response"]
       body.collect{|road| Eisenhower::Road.new({
         :id               => road["_id"], 
@@ -39,17 +39,17 @@ module Eisenhower
     
     class << self
         def all
-          body = Eisenhower::Client.get_and_parse('/roadmap/listAll')
-          body.collect{|roadmap| Eisenhower::Roadmap.new({
-            :id        => roadmap.last.last["_id"], 
-            :app_id    => roadmap.last.last["appId"], 
-            :archived  => roadmap.last.last["archived"],
-            :public    => roadmap.last.last["public"],
-            :title     => roadmap.last.last["title"],
-            :time      => roadmap.last.last["time"],
-            :staff_ids => roadmap.last.last["staff"].collect{|staff| staff["_id"]}
-            }
-          )}
+          return body = Eisenhower::Client.get_and_parse('/roadmap/listAll')
+          #body.collect{|roadmap| Eisenhower::Roadmap.new({
+          #  :id        => roadmap.last.last["_id"], 
+          #  :app_id    => roadmap.last.last["appId"], 
+          #  :archived  => roadmap.last.last["archived"],
+          #  :public    => roadmap.last.last["public"],
+          #  :title     => roadmap.last.last["title"],
+          #  :time      => roadmap.last.last["time"],
+          #  :staff_ids => roadmap.last.last["staff"].collect{|staff| staff["_id"]}
+          #  }
+          #)}
         end
         
         def find(app_id)
