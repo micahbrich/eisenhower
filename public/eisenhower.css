@@ -1,0 +1,101 @@
+html {
+	background-color: #1b1515;
+}
+body {
+	background-color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    width: 600px;
+    margin: 0 auto;
+	padding-bottom: 1.618em;
+}
+.tag {
+	color: #afafaf;
+	font-weight: bold;
+}
+h1 {
+	text-indent: -9999px;
+	width: 600px;
+	height: 240px;
+	background: transparent url('/images/portrait-header.jpg') no-repeat;
+	margin-top: 0;
+	padding-bottom: 1px;
+	margin-bottom: 1.618em;
+	text-align: center;
+    text-transform:uppercase;
+    letter-spacing: 2px;
+    font-size: 18px;
+    text-shadow: 0px 1px 1px rgba(0,0,0,0.10);
+}
+a {
+	color: #caa346;
+	font-weight: bold;
+	-webkit-transition: all .2s ease-in-out;
+}
+a:hover, a.twitter:hover, a.github:hover {
+	color: #f1c354;
+	opacity: 1.0;
+	-webkit-transition: all .2s ease-in-out;
+}
+a.twitter {
+	opacity: 0.45;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background: transparent url('/images/twitter.png') no-repeat;
+	text-indent: -9999px;
+}
+a.github {
+	opacity: 0.45;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background: transparent url('/images/github.png') no-repeat;
+	text-indent: -9999px;
+}
+p {
+	line-height: 1.618em;
+	padding: 0 2.618em;
+}
+
+hr {
+	height: 0;
+	border: none;
+	border-bottom: 1px solid rgba(0,0,0,0.16);
+	margin: 2.618em 0;
+}
+
+h1 img {
+    vertical-align: -24%;
+    margin-right: 8px;
+}
+code {
+    display:block;
+    margin-top: 1.618em;
+    padding: 1em 2.618em;
+    background-color: #efedee;
+}
+li {
+	line-height: 1.618em;
+	margin: 0;
+}
+ul.examples { list-style-type:none; padding: 0; }
+ul.examples > li {
+	margin-top: 2.618em;
+}
+ul.examples li p, ul.examples li li {
+    font-size: 12px;
+}
+ul.todo li h4 {
+	margin-bottom: 0;
+}
+ul.todo li p {
+	margin-top: 0;
+	padding-left: 4px;
+}
+
+footer {
+	color: #a8a8a8;
+	margin-top: 4.618em;
+	font-size: 10px;
+}

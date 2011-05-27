@@ -1,0 +1,71 @@
+---
+layout: default
+---
+
+    <h1>Eisenhower</h1>
+    <p>
+        Eisenhower is a work-in-progress read-only rubygem to help you work the <a href="http://developers.interstateapp.com/">Interstate API</a>.
+    </p>
+    
+    <ul class="examples">
+        <li>
+            {% highlight ruby %}Eisenhower.oauth_token = '432n4u3h24v23'{% endhighlight %}
+            <p>
+                First thing to do is set an OAuth token –&nbsp;how you get this, at the moment, is up to you.
+            </p>
+        </li>
+        <li>
+            {% highlight ruby %}Eisenhower::Roadmap.all{% endhighlight %}
+            <p>
+                Now you can get all your roadmaps!
+            </p>
+        </li>
+        
+        <li>
+            {% highlight ruby %}map = Eisenhower::Roadmap.all.first
+map = Eisenhower::Roadmap.find('234f23f23fc2fg')
+map.roads
+{% endhighlight %}
+            <p>
+                You'll get back interconnected <strong>Eisenhower</strong> objects whenever possible. The main objects currently implemented, with closely-matching attributes, are:
+                <ol>
+                    <li><a href="http://developers.interstateapp.com/roadmap/get">Roadmaps</a></li>
+                    <li><a href="http://developers.interstateapp.com/road/get">Roads</a></li>
+                    <li><a href="http://developers.interstateapp.com/update/get">Road Updates</a></li>
+                    <li><a href="http://developers.interstateapp.com/staff/get">Staff</a></li>
+                </ol>
+            </p>
+        </li>
+    </ul>
+    
+    <hr/>
+    
+    <p>
+        There's much left <span class="tag">#todo</span>, so please feel free to <a href="https://github.com/micahbrich/eisenhower">fork it on github</a>.
+        <ul class="todo">
+            <li>
+                <h4>Refactor</h4>
+                <p>
+                    There are too many API calls, which makes getting simple information slow. API calls inside API calls gets ugly, and there's a lot of information that could be instantiated without an extra call.
+                </p>
+            </li>
+            <li>
+                <h4>Tests</h4>
+                <p>
+                    I'm as designer, and am subsequently despicable at writing tests. Please help.
+                </p>
+            </li>
+            <li>
+                <h4>Implement newer API objects</h4>
+                <p>
+                    There are now at least two more objects (File &amp; Activity) that I haven't touched yet.
+                </p>
+            </li>
+            <li>
+                <h4>Writing as well as Reading</h4>
+                <p>
+                    The only reason Eisenhower is read-only is because that's all I've found time to do so far. Help here would be swell.
+                </p>
+            </li>
+        </ul>
+    </p>
