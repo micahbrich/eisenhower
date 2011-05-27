@@ -1,8 +1,4 @@
-<img src="https://github.com/micahbrich/eisenhower/raw/gh-pages/public/images/portrait-header.jpg">
-
-
-Eisenhower
-==========
+<img src="https://github.com/micahbrich/eisenhower/raw/gh-pages/public/images/portrait-header.jpg" alt="Eisenhower">
 
 Eisenhower is a work-in-progress read-only rubygem to help you work the
 [Interstate API](http://developers.interstateapp.com).
@@ -17,7 +13,7 @@ Now you can get all your roadmaps!
 
     Eisenhower::Roadmap.all
 
-You’ll get back interconnected **Eisenhower** objects whenever possible. The main objects currently implemented, with closely-matching attributes, are:
+You’ll get back interconnected **Eisenhower** objects whenever possible. Try this to get all the roads on a specific roadmap:
 
     map = Eisenhower::Roadmap.all.first 
     map = Eisenhower::Roadmap.find("234f23f23fc2fg") 
@@ -35,24 +31,18 @@ Double check the code, but most attributes are from Interstate's documentation:
 There’s much left to do, so please feel free
 to fork it & help out.
 
--   #### Refactor
+#### Refactor
 
-    There are too many API calls, which makes getting simple information
-    slow. API calls inside API calls gets ugly, and there’s a lot of
-    information that could be instantiated without an extra call.
+There are too many API calls, which makes getting simple information slow. API calls inside API calls gets ugly, and there’s a lot of information that could be instantiated without an extra call.
 
--   #### Tests
+#### Tests
+I'm a designer, and am subsequently despicable at writing tests. Please help.
 
-    I’m as designer, and am subsequently despicable at writing tests.
-    Please help.
+#### Implement newer API objects
 
--   #### Implement newer API objects
+There are now at least two more objects (File & Activity) that I haven’t touched yet.
 
-    There are now at least two more objects (File & Activity) that I
-    haven’t touched yet.
+#### Writing as well as Reading
 
--   #### Writing as well as Reading
-
-    The only reason Eisenhower is read-only is because that’s all I’ve
-    found time to do so far. Help here would be swell.
+The only reason Eisenhower is read-only is because that’s all I’ve found time to do so far. Help here would be swell.
 
