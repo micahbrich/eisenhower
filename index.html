@@ -6,35 +6,74 @@ layout: default
     <p>
         Eisenhower is a work-in-progress read-only rubygem to help you work the <a href="http://developers.interstateapp.com/">Interstate API</a>.
     </p>
-    
+
+    <hr/>
     <ul class="examples">
         <li>
-            {% highlight ruby %}Eisenhower.oauth_token = '432n4u3h24v23'{% endhighlight %}
             <p>
                 First thing to do is set an OAuth token –&nbsp;how you get this, at the moment, is up to you.
             </p>
+            {% highlight ruby %}Eisenhower.oauth_token = '432n4u3h24v23'{% endhighlight %}
         </li>
         <li>
-            {% highlight ruby %}Eisenhower::Roadmap.all{% endhighlight %}
             <p>
                 Now you can get all your roadmaps!
             </p>
+            {% highlight ruby %}Eisenhower::Roadmap.all{% endhighlight %}
         </li>
-        
+
         <li>
-            {% highlight ruby %}map = Eisenhower::Roadmap.all.first
-map = Eisenhower::Roadmap.find('234f23f23fc2fg')
-map.roads
-{% endhighlight %}
             <p>
-                You'll get back interconnected <strong>Eisenhower</strong> objects whenever possible. The main objects currently implemented, with closely-matching attributes, are:
-                <ol>
-                    <li><a href="http://developers.interstateapp.com/roadmap/get">Roadmaps</a></li>
-                    <li><a href="http://developers.interstateapp.com/road/get">Roads</a></li>
-                    <li><a href="http://developers.interstateapp.com/update/get">Road Updates</a></li>
-                    <li><a href="http://developers.interstateapp.com/staff/get">Staff</a></li>
-                </ol>
+                You'll get back interconnected <strong>Eisenhower</strong> objects whenever possible.
             </p>
+
+            {% highlight ruby %}map = Eisenhower::Roadmap.all.first 
+map = Eisenhower::Roadmap.find("234f23f23fc2fg")
+    #<Eisenhower::Roadmap:0x00000100964028 
+        @id="4d86bd5a36c040e22c000285", 
+        @app_id="4d86bd5a36c040e22c000283", 
+        @archived=false, 
+        @public=nil, 
+        @title="Your first roadmap", 
+        @staff_ids=
+            ["4d86bd5a36c040e22c000284", 
+            "4d90e61336c040672d00035e"]>
+
+map.roads 
+    [#<Eisenhower::Road:0x000001009156d0 
+        @id="4d86bd5a36c040e22c000287", 
+        @title="This is a road", 
+        @description="A road is usually the name of...", 
+        @description_html="<p>A road is usually the...</p>", 
+        @collapsed=false, 
+        @status="Launched", 
+        @due=false, 
+        @started=false, 
+        @position=0, 
+        @updates_count=0, 
+        @update_ids=[], 
+        @staff_ids=["4d86bd5a36c040e22c000284"]>]
+
+map.roads.first.title
+    "This is a road" 
+
+map.roads.first.staff
+    [#<Eisenhower::Staff:0x000001019d9548 
+        @id="4d86bd5a36c040e22c000284", 
+        @full_name="Micah Rich", 
+        @email=nil, 
+        @admin=true>]
+        {% endhighlight %}
+        <br/>
+        <p>
+            The main objects currently implemented, with closely-matching attributes, are:
+            <ol>
+                <li><a href="http://developers.interstateapp.com/roadmap/get">Roadmaps</a></li>
+                <li><a href="http://developers.interstateapp.com/road/get">Roads</a></li>
+                <li><a href="http://developers.interstateapp.com/update/get">Road Updates</a></li>
+                <li><a href="http://developers.interstateapp.com/staff/get">Staff</a></li>
+            </ol>
+        </p>
         </li>
     </ul>
     
