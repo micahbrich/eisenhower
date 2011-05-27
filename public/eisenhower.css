@@ -30,7 +30,6 @@ h1 {
 a {
 	color: #caa346;
 	font-weight: bold;
-	-webkit-transition: all .2s ease-in-out;
 }
 a:hover, a.twitter:hover, a.github:hover {
 	color: #f1c354;
